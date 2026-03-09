@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +19,13 @@ export default function RootLayout({
   return (
     <div className="wrapper">
       {/* Background and Overlay */}
-      <img src="/images/background.png" className="bg-img" alt="background" />
+      <Image
+        src="/images/background.png"
+        className="bg-img"
+        alt="background"
+        width={1920}
+        height={100}
+      />
       <div className="overlay"></div>
 
       <main className="!z-50 w-full">
